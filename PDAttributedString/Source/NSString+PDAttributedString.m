@@ -238,7 +238,7 @@
 
 @end
 
-@implementation NSAttributedString (PDAdd)
+@implementation NSAttributedString (PDAttributedString)
 
 - (NSAttributedString *)setAttributes:(NSDictionary<NSAttributedStringKey, id> *)attrs
                                string:(NSString *)aString
