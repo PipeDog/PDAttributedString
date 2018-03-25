@@ -88,7 +88,7 @@
 - (NSAttributedString *)textForSectionOne:(PDAttributedStringMatchType)matchType {
     NSString *text = @"Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great.";
     NSDictionary<NSAttributedStringKey, id> *dict = @{NSFontAttributeName: [UIFont systemFontOfSize:20],
-                                                      NSForegroundColorAttributeName: [UIColor orangeColor],
+                                                      NSForegroundColorAttributeName: [UIColor brownColor],
                                                       NSUnderlineStyleAttributeName: @1};
     NSAttributedString *attributedText;
     
@@ -110,7 +110,7 @@
 - (NSAttributedString *)textForSectionSecond:(PDAttributedStringMatchType)matchType {
     NSString *text = @"Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great.";
     NSDictionary<NSAttributedStringKey, id> *dict = @{NSFontAttributeName: [UIFont systemFontOfSize:20],
-                                                      NSForegroundColorAttributeName: [UIColor orangeColor],
+                                                      NSForegroundColorAttributeName: [UIColor brownColor],
                                                       NSUnderlineStyleAttributeName: @1,
                                                       NSStrokeWidthAttributeName: @2,
                                                       NSStrokeColorAttributeName: [UIColor blackColor],
@@ -135,7 +135,7 @@
 - (NSAttributedString *)textForSectionThree:(PDAttributedStringMatchType)matchType {
     NSString *text = @"Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great.";
     NSDictionary<NSAttributedStringKey, id> *dict = @{NSFontAttributeName: [UIFont systemFontOfSize:20],
-                                                      NSForegroundColorAttributeName: [UIColor orangeColor],
+                                                      NSForegroundColorAttributeName: [UIColor brownColor],
                                                       NSUnderlineStyleAttributeName: @1};
     NSAttributedString *attributedText;
     
