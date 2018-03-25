@@ -15,6 +15,7 @@
 		EC5515A22067A1D7000DF30A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515A12067A1D7000DF30A /* main.m */; };
 		EC5515AC2067A1D8000DF30A /* PDAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515AB2067A1D8000DF30A /* PDAttributedStringTests.m */; };
 		EC5515B72067A1D8000DF30A /* PDAttributedStringUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515B62067A1D8000DF30A /* PDAttributedStringUITests.m */; };
+		EC5515C72067A223000DF30A /* NSString+PDAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		EC5515B22067A1D8000DF30A /* PDAttributedStringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDAttributedStringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5515B62067A1D8000DF30A /* PDAttributedStringUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDAttributedStringUITests.m; sourceTree = "<group>"; };
 		EC5515B82067A1D8000DF30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5515C52067A223000DF30A /* NSString+PDAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PDAttributedString.h"; sourceTree = "<group>"; };
+		EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDAttributedString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		EC5515912067A1D7000DF30A /* PDAttributedString */ = {
 			isa = PBXGroup;
 			children = (
+				EC5515C42067A1E7000DF30A /* Source */,
 				EC5515922067A1D7000DF30A /* AppDelegate.h */,
 				EC5515932067A1D7000DF30A /* AppDelegate.m */,
 				EC5515952067A1D7000DF30A /* ViewController.h */,
@@ -130,6 +134,15 @@
 				EC5515B82067A1D8000DF30A /* Info.plist */,
 			);
 			path = PDAttributedStringUITests;
+			sourceTree = "<group>";
+		};
+		EC5515C42067A1E7000DF30A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EC5515C52067A223000DF30A /* NSString+PDAttributedString.h */,
+				EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +280,7 @@
 			files = (
 				EC5515972067A1D7000DF30A /* ViewController.m in Sources */,
 				EC5515A22067A1D7000DF30A /* main.m in Sources */,
+				EC5515C72067A223000DF30A /* NSString+PDAttributedString.m in Sources */,
 				EC5515942067A1D7000DF30A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
