@@ -16,6 +16,8 @@
 		EC5515AC2067A1D8000DF30A /* PDAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515AB2067A1D8000DF30A /* PDAttributedStringTests.m */; };
 		EC5515B72067A1D8000DF30A /* PDAttributedStringUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515B62067A1D8000DF30A /* PDAttributedStringUITests.m */; };
 		EC5515C72067A223000DF30A /* NSString+PDAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */; };
+		EC8ECBA421C5017E001C4097 /* NSString+PDRanges.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8ECBA321C5017E001C4097 /* NSString+PDRanges.m */; };
+		EC8ECBA521C5052F001C4097 /* NSString+PDRanges.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8ECBA321C5017E001C4097 /* NSString+PDRanges.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		EC5515B82067A1D8000DF30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5515C52067A223000DF30A /* NSString+PDAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PDAttributedString.h"; sourceTree = "<group>"; };
 		EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDAttributedString.m"; sourceTree = "<group>"; };
+		EC8ECBA221C5017E001C4097 /* NSString+PDRanges.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PDRanges.h"; sourceTree = "<group>"; };
+		EC8ECBA321C5017E001C4097 /* NSString+PDRanges.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDRanges.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				EC5515C52067A223000DF30A /* NSString+PDAttributedString.h */,
 				EC5515C62067A223000DF30A /* NSString+PDAttributedString.m */,
+				EC8ECBA221C5017E001C4097 /* NSString+PDRanges.h */,
+				EC8ECBA321C5017E001C4097 /* NSString+PDRanges.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				EC5515972067A1D7000DF30A /* ViewController.m in Sources */,
 				EC5515A22067A1D7000DF30A /* main.m in Sources */,
+				EC8ECBA421C5017E001C4097 /* NSString+PDRanges.m in Sources */,
 				EC5515C72067A223000DF30A /* NSString+PDAttributedString.m in Sources */,
 				EC5515942067A1D7000DF30A /* AppDelegate.m in Sources */,
 			);
@@ -290,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5515AC2067A1D8000DF30A /* PDAttributedStringTests.m in Sources */,
+				EC8ECBA521C5052F001C4097 /* NSString+PDRanges.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

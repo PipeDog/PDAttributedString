@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+PDRanges.h"
 
 typedef NS_ENUM(NSUInteger, PDAttributedStringMatchType) {
     PDAttributedStringMatchTypeMatchOnce   = 0, ///< The first matching substring.
@@ -38,10 +39,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSAttributedString *)setAttributes:(NSDictionary<NSAttributedStringKey, id> *)attrs
                                 regex:(NSString *)regexString
+                              options:(NSRegularExpressionOptions)options
                             matchType:(PDAttributedStringMatchType)matchType;
 
 - (NSAttributedString *)addAttributes:(NSDictionary<NSAttributedStringKey, id> *)attrs
                                 regex:(NSString *)regexString
+                              options:(NSRegularExpressionOptions)options
                             matchType:(PDAttributedStringMatchType)matchType;
 
 @end

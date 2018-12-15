@@ -140,16 +140,16 @@
     NSAttributedString *attributedText;
     
     if (matchType == PDAttributedStringMatchTypeMatchOnce) {
-        attributedText = [text addAttributes:dict regex:@"are not born with the great" matchType:PDAttributedStringMatchTypeMatchOnce];
+        attributedText = [text addAttributes:dict regex:@"are not born with the great" options:NSRegularExpressionDotMatchesLineSeparators matchType:PDAttributedStringMatchTypeMatchOnce];
     }
     else if (matchType == PDAttributedStringMatchTypeUnmatchOnce) {
-        attributedText = [text addAttributes:dict regex:@"are not born with the great" matchType:PDAttributedStringMatchTypeUnmatchOnce];
+        attributedText = [text addAttributes:dict regex:@"are not born with the great" options:NSRegularExpressionDotMatchesLineSeparators matchType:PDAttributedStringMatchTypeUnmatchOnce];
     }
     else if (matchType == PDAttributedStringMatchTypeMatchAll) {
-        attributedText = [text addAttributes:dict regex:@"are not born with the great" matchType:PDAttributedStringMatchTypeMatchAll];
+        attributedText = [text addAttributes:dict regex:@"are not born with the great" options:NSRegularExpressionDotMatchesLineSeparators matchType:PDAttributedStringMatchTypeMatchAll];
     }
     else if (matchType == PDAttributedStringMatchTypeUnmatchAll) {
-        attributedText = [text addAttributes:dict regex:@"are not born with the great" matchType:PDAttributedStringMatchTypeUnmatchAll];
+        attributedText = [text addAttributes:dict regex:@"are not born with the great" options:NSRegularExpressionDotMatchesLineSeparators matchType:PDAttributedStringMatchTypeUnmatchAll];
     }
     return attributedText;
 }

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "NSString+PDRanges.h"
+
+static NSString *const kTestString = @"Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great.";
 
 @interface AppDelegate ()
 
@@ -17,7 +20,72 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self testRangesByString];
+    [self testRangesByRegex];
+    [self testRangesByRange];
     return YES;
+}
+
+- (void)testRangesByString {
+    NSLog(@"\n===========================================================>\n");
+    NSLog(@"\n======================== ByString =========================>\n");
+    NSLog(@"\n===========================================================>\n");
+    NSArray<NSValue *> *ranges0 = [kTestString rangesByOnceMatchString:@"great"];
+    NSArray<NSValue *> *ranges1 = [kTestString rangesByOnceUnmatchString:@"great"];
+    NSArray<NSValue *> *ranges2 = [kTestString rangesByAllMatchString:@"great"];
+    NSArray<NSValue *> *ranges3 = [kTestString rangesByAllUnmatchString:@"great"];
+    
+    [self printRanges:ranges0 ofString:kTestString];
+    [self printRanges:ranges1 ofString:kTestString];
+    [self printRanges:ranges2 ofString:kTestString];
+    [self printRanges:ranges3 ofString:kTestString];
+}
+
+- (void)testRangesByRegex {
+    NSLog(@"\n===========================================================>\n");
+    NSLog(@"\n======================== ByRegex =========================>\n");
+    NSLog(@"\n===========================================================>\n");
+    NSArray<NSValue *> *ranges0 = [kTestString rangesByOnceMatchRegexString:@"[t|h]" options:NSRegularExpressionDotMatchesLineSeparators];
+    NSArray<NSValue *> *ranges1 = [kTestString rangesByOnceUnmatchRegexString:@"[t|h]" options:NSRegularExpressionDotMatchesLineSeparators];
+    NSArray<NSValue *> *ranges2 = [kTestString rangesByAllMatchRegexString:@"[t|h]" options:NSRegularExpressionDotMatchesLineSeparators];
+    NSArray<NSValue *> *ranges3 = [kTestString rangesByAllUnmatchRegexString:@"[t|h]" options:NSRegularExpressionDotMatchesLineSeparators];
+    
+    [self printRanges:ranges0 ofString:kTestString];
+    [self printRanges:ranges1 ofString:kTestString];
+    [self printRanges:ranges2 ofString:kTestString];
+    [self printRanges:ranges3 ofString:kTestString];
+}
+
+- (void)testRangesByRange {
+    NSLog(@"\n===========================================================>\n");
+    NSLog(@"\n======================== ByRange =========================>\n");
+    NSLog(@"\n===========================================================>\n");
+    NSArray<NSValue *> *ranges0 = [kTestString rangesOfMatchByRange:NSMakeRange(0, 10)];
+    NSArray<NSValue *> *ranges1 = [kTestString rangesOfMatchByRange:NSMakeRange(2, 10)];
+    NSArray<NSValue *> *ranges2 = [kTestString rangesOfMatchByRange:NSMakeRange(10, kTestString.length)];
+    
+    NSArray<NSValue *> *ranges3 = [kTestString rangesOfUnmatchByRange:NSMakeRange(0, 10)];
+    NSArray<NSValue *> *ranges4 = [kTestString rangesOfUnmatchByRange:NSMakeRange(2, 10)];
+    NSArray<NSValue *> *ranges5 = [kTestString rangesOfUnmatchByRange:NSMakeRange(10, kTestString.length)];
+    
+    [self printRanges:ranges0 ofString:kTestString];
+    [self printRanges:ranges1 ofString:kTestString];
+    [self printRanges:ranges2 ofString:kTestString];
+    [self printRanges:ranges3 ofString:kTestString];
+    [self printRanges:ranges4 ofString:kTestString];
+    [self printRanges:ranges5 ofString:kTestString];
+}
+
+- (void)printRanges:(NSArray<NSValue *> *)ranges ofString:(NSString *)aString {
+    NSLog(@"\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+    for (NSValue *rangeValue in ranges) {
+        [self printSubstringOfString:aString byRange:[rangeValue rangeValue]];
+    }
+    NSLog(@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n");
+}
+
+- (void)printSubstringOfString:(NSString *)aString byRange:(NSRange)range {
+    NSLog(@"range = %@, substr = %@", NSStringFromRange(range), [aString substringWithRange:range]);
 }
 
 
