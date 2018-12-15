@@ -36,20 +36,27 @@
 }
 
 - (NSArray<NSValue *> *)rangesByAllMatchString:(NSString *)aString {
-    if (![self containsString:aString]) {
-        return @[];
-    }
-    NSString *selfCopy = [self copy];
+    NSUInteger loc = 0;
     NSMutableArray<NSValue *> *ranges = [NSMutableArray array];
     
-    NSString *currentString = @"";
-    for (NSUInteger i = 0; i < selfCopy.length - aString.length; i ++) {
-        currentString = [selfCopy substringWithRange:NSMakeRange(i, aString.length)];
-        
-        if ([currentString isEqualToString:aString]) {
-            NSRange range = NSMakeRange(i, aString.length);
-            [ranges addObject:[NSValue valueWithRange:range]];
+    NSRange range = [self rangeOfString:aString];
+    if (range.location == NSNotFound) {
+        return [ranges copy];
+    }
+    
+    NSString *tempString = [self copy];
+    
+    while (range.location != NSNotFound) {
+        if (loc == 0) {
+            loc += range.location;
+        } else {
+            loc += range.location + aString.length;
         }
+        
+        [ranges addObject:[NSValue valueWithRange:NSMakeRange(loc, aString.length)]];
+
+        tempString = [tempString substringFromIndex:(range.location + range.length)];
+        range = [tempString rangeOfString:aString];
     }
     return ranges;
 }
