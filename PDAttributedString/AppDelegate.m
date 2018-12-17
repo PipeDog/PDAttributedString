@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "NSString+PDRanges.h"
 
 static NSString *const kTestString = @"Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great. Great people are not born with the great, but in the process of growing up show its great.";
 
@@ -20,12 +19,13 @@ static NSString *const kTestString = @"Great people are not born with the great,
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self testRangesByString];
-    [self testRangesByRegex];
-    [self testRangesByRange];
+//    [self testRangesByString];
+//    [self testRangesByRegex];
+//    [self testRangesByRange];
     return YES;
 }
 
+/*
 - (void)testRangesByString {
     NSLog(@"\n===========================================================>\n");
     NSLog(@"\n======================== ByString =========================>\n");
@@ -87,6 +87,7 @@ static NSString *const kTestString = @"Great people are not born with the great,
 - (void)printSubstringOfString:(NSString *)aString byRange:(NSRange)range {
     NSLog(@"range = %@, substr = %@", NSStringFromRange(range), [aString substringWithRange:range]);
 }
+ */
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

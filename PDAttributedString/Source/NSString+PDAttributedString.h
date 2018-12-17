@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSString+PDRanges.h"
 
 typedef NS_ENUM(NSUInteger, PDAttributedStringMatchType) {
     PDAttributedStringMatchTypeMatchOnce   = 0, ///< The first matching substring.
